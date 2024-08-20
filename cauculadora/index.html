@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        .caixa {
+            width: 300px;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .nota-input {
+            margin-bottom: 10px;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <h1>Calculadora notas sesi</h1>
+        <div class="nota-input">
+            <label for="nota1">Nota av1:</label>
+            <input type="number" id="nota1" min="0" max="10" step="0.1">
+        </div>
+        <div class="nota-input">
+            <label for="nota2">Nota av2:</label>
+            <input type="number" id="nota2" min="0" max="10" step="0.1">
+        </div>
+        <div class="nota-input">
+            <label for="nota3">Nota avt:</label>
+            <input type="number" id="nota3" min="0" max="10" step="0.1">
+        </div>
+        <button onclick="calcularMedia()">Calcular Média</button>
+        <div id="resultado"></div>
+    </div>
+    <script src
